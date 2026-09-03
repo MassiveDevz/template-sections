@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+      @keyframes ticker {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          transform: translate3d(-50%, 0, 0);
+        }
+      }
+
+      .animate-ticker {
+        display: flex;
+        align-items: center;
+        gap: 0.625rem;
+        width: max-content;
+        min-width: max-content;
+        animation: ticker 50s linear infinite;
+        will-change: transform;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- scroller with the four pillars
+
+      https://preview.themeforest.net/item/securevest-modern-digital-banking-financial-services-nextjs-template/full_screen_preview/64514005 -->
+
+    <!-- Use case for the players
+      https://preview.themeforest.net/item/habitline-mobile-app-saas-landing-page-react-tailwind-css-template/full_screen_preview/64530798 
+      -->
+
+    <div class="py-24 bg-red-100"></div>
+    <div class="mx-auto px-6 md:mt-12 mt-4 flex flex-col gap-y-5 items-center">
+      <!-- Rating Badge -->
+      <div class="flex items-center gap-2 border border-default-200 bg-white md:px-5 px-2.5 py-2 rounded-full">
+        <i class="iconify tabler--star-filled size-3.5 text-primary-1"></i>
+        <p class="text-sm text-default-500 font-medium">
+          <span class="text-black font-medium">4.7 rating</span>
+          (based on 125 reviews)
+        </p>
+      </div>
+
+      <p class="text-default-700 md:text-lg text-base leading-normal mb-2.5 md:w-xl w-xs">
+        Stay consistent with a system that fits into real life. Simple cards, clear routines, and gentle nudges help you build progress that
+        lasts.
+      </p>
+
+      <!-- Buttons with Sliding Effect -->
+      <div class="flex flex-col md:flex-row gap-5 w-full justify-center">
+        <!-- Apple Button -->
+        <a
+          href="#"
+          class="group relative px-8.5 overflow-hidden rounded-full bg-black shadow-xl! text-white inline-flex items-center justify-center hover:scale-95 transition-all duration-300"
+        >
+          <div class="relative inline- flex-col items-center transition-transform duration-300 group-hover:-translate-y-full">
+            <div class="flex items-center gap-3 h-14">
+              <img src="/habitline/images/icons/app-store-light.svg" class="w-5 h-5" alt="" />
+              <span class="font-normal">Download for iPhone</span>
+            </div>
+            <div class="flex items-center gap-3 h-14 absolute top-full">
+              <img src="/habitline/images/icons/app-store-light.svg" class="w-5 h-5" alt="" />
+              <span class="font-normal">Download for iPhone</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Android Button -->
+        <a
+          href="#"
+          class="group relative px-8.5 overflow-hidden rounded-full bg-default-200 text-black inline-flex items-center justify-center hover:scale-95 transition-all duration-300"
+        >
+          <div class="relative flex flex-col items-center transition-transform duration-300 group-hover:-translate-y-full">
+            <div class="flex items-center gap-2.5 h-14">
+              <img src="/habitline/images/icons/play-store.svg" class="w-5 h-5" alt="" />
+              <span class="font-normal">Get it on Android</span>
+            </div>
+            <div class="flex items-center gap-2.5 h-14 absolute top-full">
+              <img src="/habitline/images/icons/play-store.svg" class="w-5 h-5" alt="" />
+              <span class="font-normal">Get it on Android</span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="py-24 bg-red-100"></div>
+    <section class="partners">
+      <div class="container">
+        <div class="partner-inner">
+          <div class="partner-title text-center pb-6 md:w-[100%] lg:w-[50%] mx-auto">
+            <p class="mb-1 text-pink-600">OUR PARTNERS</p>
+            <h2 class="mb-1">SPONSERS AND <span class="text-pink-600">PARTNERS</span></h2>
+            <p class="m-0">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          <div class="partner-img pb-6">
+            <div class="grid grid-cols-1 md:grid-cols-5 lg:grid-cols-5">
+              <div class="w-full flex border-b md:border-r md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+
+              <div class="w-full flex border-b md:border-r md:border-t md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-t md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-t md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-r md:border-t md:border-b-0 flex justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+              <div class="w-full flex border-b md:border-t md:border-b-0 justify-center items-center">
+                <div class="p-2 partner-img-box text-center">
+                  <img
+                    src="https://htmldesigntemplates.com/html/eventen-tailwind/images/icon/4.png"
+                    alt="partner-img"
+                    class="opacity-75 hover:opacity-100 w-full"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="partner-button text-center">
+            <a
+              class="rounded bg-pink-600 uppercase text-white hover:bg-blue-600 hover:text-white py-3 px-5 inline-block transition-all duration-300"
+              href="sponsers.html"
+              >VIEW MORE SPONSERS</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="py-24 bg-red-100"></div>
+    <section class="bg-green-100 lg:pb-45 md:pb-25 pb-20">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row md:items-center justify-between lg:mb-15 md:mb-12 mb-7.5 md:gap-6 gap-2.5">
+          <h2 class="text-4xl md:text-[40px] lg:text-6xl font-medium font-heading text-primary-2 leading-tight">How Salifact works</h2>
+          <a
+            href="contact.html"
+            class="flex items-center justify-center py-2.5 px-5.5 text-base font-medium rounded-full bg-primary-2 text-white group hover:rounded-xl transition-all duration-300 w-max shrink-0"
+          >
+            <div class="relative overflow-hidden flex">
+              <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Let's Get Started</span>
+              <span
+                class="absolute inset-0 inline-block transition-transform duration-500 translate-y-[120%] group-hover:translate-y-0 text-center"
+                >Let's Get Started</span
+              >
+            </div>
+          </a>
+        </div>
+
+        <div
+          scroll-item=""
+          class="w-layout-grid step-item-wrap flex flex-col md:flex-row gap-2.5 w-full"
+          style="translate: none; rotate: none; scale: none; opacity: 1; transform: translate3d(0px, 0px, 0px)"
+        >
+          <!-- Step 1 -->
+          <div
+            class="step-item one group relative rounded-2xl overflow-hidden md:min-h-[480px] bg-white border border-black/5 flex flex-col md:p-8 p-5 transition-all duration-500 hover:shadow-xl flex-1 md:hover:flex-[2] min-w-0"
+          >
+            <!-- Normal State (Static) -->
+            <div
+              class="step-item-static static-01 flex flex-col h-full z-10 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none w-full"
+            >
+              <div class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto">
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">01</div>
+              </div>
+              <div class="step-info-static mt-auto">
+                <h3 class="step-title text-2xl font-medium text-primary-2 mb-3">Connect your tools</h3>
+                <p class="step-description text-base text-default-600 leading-relaxed">
+                  Securely link apps, databases, and services to create a unified automation layer that moves data instantly, enforces
+                  consistency, and scales effortlessly.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hover State (Image + Dark Text) -->
+            <div
+              class="step-item-hover hover-01 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col p-8"
+            >
+              <div class="step-image-wrap absolute inset-0">
+                <img
+                  src="https://unifato.com/salifact/images/hero/hero-image.webp"
+                  loading="lazy"
+                  sizes="100vw"
+                  srcset="
+                    /images/blog/step-1-p-500.webp                           500w,
+                    /images/blog/step-1-p-800.webp                           800w,
+                    https://unifato.com/salifact/images/hero/hero-image.webp 810w
+                  "
+                  alt="Image"
+                  class="step-image w-full h-full object-cover"
+                />
+                <div
+                  class="step-overlay absolute inset-0 bg-linear-to-t from-primary-2 via-primary-2/60 to-primary-2/20 transition-colors"
+                ></div>
+              </div>
+              <div
+                class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto relative z-10"
+              >
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">01</div>
+              </div>
+              <div class="step-info-hover mt-auto relative z-10">
+                <h3 class="step-title text-white text-2xl font-medium mb-3">Connect your tools</h3>
+                <p class="step-description text-white/90 text-base leading-relaxed">
+                  Securely link apps, databases, and services to create a unified automation layer that moves data instantly, enforces
+                  consistency, and scales effortlessly.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div
+            class="step-item two group relative rounded-2xl overflow-hidden md:min-h-[480px] bg-white border border-black/5 flex flex-col md:p-8 p-5 transition-all duration-500 hover:shadow-xl flex-1 md:hover:flex-[2] min-w-0"
+          >
+            <!-- Normal State (Static) -->
+            <div
+              class="step-item-static static-02 flex flex-col h-full z-10 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none w-full"
+            >
+              <div class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto">
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">02</div>
+              </div>
+              <div class="step-info-static mt-auto">
+                <h3 class="step-title text-2xl font-medium text-white mb-3">Define workflow logic</h3>
+                <p class="step-description text-base text-default-600 leading-relaxed">
+                  Configure triggers, conditions, and actions using flexible rules that match how your processes actually operate.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hover State (Image + Dark Text) -->
+            <div
+              class="step-item-hover hover-02 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col p-8"
+            >
+              <div class="step-image-wrap absolute inset-0">
+                <img
+                  src="https://unifato.com/salifact/images/hero/hero-image.webp"
+                  loading="lazy"
+                  sizes="100vw"
+                  srcset="
+                    https://unifato.com/salifact/images/hero/hero-image.webp 500w,
+                    https://unifato.com/salifact/images/hero/hero-image.webp 800w,
+                    https://unifato.com/salifact/images/hero/hero-image.webp 810w
+                  "
+                  alt="Image"
+                  class="step-image w-full h-full object-cover"
+                />
+                <div
+                  class="step-overlay absolute inset-0 bg-linear-to-t from-primary-2 via-primary-2/60 to-primary-2/20 transition-colors"
+                ></div>
+              </div>
+              <div
+                class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto relative z-10"
+              >
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">02</div>
+              </div>
+              <div class="step-info-hover mt-auto relative z-10">
+                <h3 class="step-title text-white text-2xl font-medium mb-3">Define workflow logic</h3>
+                <p class="step-description text-white/90 text-base leading-relaxed">
+                  Configure triggers, conditions, and actions using flexible rules that match how your processes actually operate.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div
+            id="w-node-c78a3e95-b743-b08f-1bfc-52e6273c28ea-4717ee8f"
+            class="step-item three group relative rounded-2xl overflow-hidden md:min-h-[480px] bg-white border border-black/5 flex flex-col md:p-8 p-5 transition-all duration-500 hover:shadow-xl flex-1 md:hover:flex-[2] min-w-0"
+          >
+            <!-- Normal State (Static) -->
+            <div
+              class="step-item-static static-03 flex flex-col h-full z-10 transition-opacity duration-500 group-hover:opacity-0 pointer-events-none w-full"
+            >
+              <div class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto">
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">03</div>
+              </div>
+              <div class="step-info-static mt-auto">
+                <h3 class="step-title text-2xl font-medium text-white mb-3">Automate and monitor</h3>
+                <p class="step-description text-base text-default-600 leading-relaxed">
+                  Workflows execute automatically while real-time monitoring ensures visibility, reliability, and control as activity
+                  scales.
+                </p>
+              </div>
+            </div>
+
+            <!-- Hover State (Image + Dark Text) -->
+            <div
+              class="step-item-hover hover-03 absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col p-8"
+            >
+              <div class="step-image-wrap absolute inset-0">
+                <img
+                  src="https://unifato.com/salifact/images/hero/hero-image.webp"
+                  loading="lazy"
+                  sizes="100vw"
+                  srcset="
+                    https://unifato.com/salifact/images/hero/hero-image.webp 500w,
+                    https://unifato.com/salifact/images/hero/hero-image.webp 800w,
+                    https://unifato.com/salifact/images/hero/hero-image.webp 810w
+                  "
+                  alt="Image"
+                  class="step-image w-full h-full object-cover"
+                />
+                <div
+                  class="step-overlay absolute inset-0 bg-linear-to-t from-primary-2 via-primary-2/60 to-primary-2/20 transition-colors"
+                ></div>
+              </div>
+              <div
+                class="step-number-round w-10 h-10 rounded-full bg-primary-1 flex items-center justify-center shadow-sm mb-auto relative z-10"
+              >
+                <div class="step-number text-primary-2 font-mono text-sm font-bold">03</div>
+              </div>
+              <div class="step-info-hover mt-auto relative z-10">
+                <h3 class="step-title text-white text-2xl font-medium mb-3">Automate and monitor</h3>
+                <p class="step-description text-white/90 text-base leading-relaxed">
+                  Workflows execute automatically while real-time monitoring ensures visibility, reliability, and control as activity
+                  scales.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-24 bg-red-100"></div>
+
+    <section class="bg-green-100 py-12">
+      <div class="container mx-auto">
+        <div class="flex flex-col md:gap-20 gap-7.5">
+          <!-- Feature 1 -->
+          <div
+            class="md:sticky top-24 z-10 flex flex-col md:flex-row items-center bg-white rounded-lg border border-black/5 p-5 md:p-7.5 gap-6 md:gap-10 lg:gap-8 shadow-sm"
+          >
+            <div class="flex flex-col items-start w-full md:w-1/2 lg:ps-17.5">
+              <div class="text-xs font-bold uppercase font-mono text-default-700 mb-3.75">Automation foundation</div>
+              <h2 class="text-2xl md:text-3xl lg:text-[34px] font-heading font-medium text-primary-2 leading-[1.15] mb-3.75">
+                Bring structure to complex workflows
+              </h2>
+              <p class="text-base md:text-base text-default-600 md:mb-10 mb-5 max-w-[380px] leading-relaxed">
+                Design reliable automation paths that replace disconnected tools and manual tasks.
+              </p>
+              <a
+                href="feature.html"
+                class="flex items-center justify-center py-2.5 px-7 text-sm font-semibold rounded-full bg-primary-1 text-primary-2 transition-all shadow-sm w-max group hover:rounded-xl duration-300"
+              >
+                <div class="relative overflow-hidden flex">
+                  <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Get Started</span>
+                  <span
+                    class="absolute inset-0 inline-block transition-transform duration-500 translate-y-[120%] group-hover:translate-y-0 text-center"
+                    >Get Started</span
+                  >
+                </div>
+              </a>
+            </div>
+
+            <div class="relative w-full md:w-1/2 h-70 lg:h-125 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="https://unifato.com/salifact/images/blog/bg-3.webp"
+                alt="Feature 1"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <!-- Overlay Card -->
+              <div
+                class="absolute top-1/2 inset-s-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl p-5 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.3)] lg:w-110 w-75"
+              >
+                <div class="text-xs text-default-600 font-medium mb-1.5">10:00 am - 11:00 am</div>
+                <div class="flex items-center justify-between mb-2.5">
+                  <div class="text-lg font-medium text-primary-2">Workflow events</div>
+                  <div class="flex items-center -space-x-1.5">
+                    <img
+                      src="/salifact/images/avatar/avatar-1.jpg"
+                      class="size-7.5 rounded-full border-2 border-white object-cover shadow-sm"
+                    />
+                    <div
+                      class="size-7.5 rounded-full border-2 border-white bg-primary-1 flex items-center justify-center text-[8px] font-bold text-primary-2 shadow-sm"
+                    >
+                      MP
+                    </div>
+                    <div
+                      class="size-7.5 rounded-full border-2 border-white bg-primary-1 flex items-center justify-center text-[8px] font-bold text-primary-2 shadow-sm"
+                    >
+                      PT
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col gap-2.5 mb-5">
+                  <div class="flex items-center gap-2.5 bg-default-100 rounded-md py-1.5 px-2.5">
+                    <div class="w-1.5 h-1.5 rounded-full bg-default-400"></div>
+                    <div class="text-xs font-medium text-default-600">Trigger captured</div>
+                  </div>
+                  <div class="flex items-center gap-2.5 bg-default-100 rounded-md py-1.5 px-2.5">
+                    <div class="w-1.5 h-1.5 rounded-full bg-default-400"></div>
+                    <div class="text-xs font-medium text-default-600">Logic evaluated</div>
+                  </div>
+                  <div class="flex items-center gap-2.5 bg-default-100 rounded-md py-1.5 px-2.5">
+                    <div class="w-1.5 h-1.5 rounded-full bg-default-400"></div>
+                    <div class="text-xs font-medium text-default-600">Actions scheduled</div>
+                  </div>
+                </div>
+                <div class="inline-flex items-center px-4 py-2 bg-primary-1 text-primary-2 text-xs font-medium rounded-md">Completed</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div
+            class="md:sticky top-32 z-20 flex flex-col md:flex-row items-center bg-white rounded-lg border border-black/5 p-5 md:p-7.5 gap-6 md:gap-10 lg:gap-8 shadow-md"
+          >
+            <div class="flex flex-col items-start w-full md:w-1/2 lg:ps-17.5">
+              <div class="text-xs font-bold uppercase font-mono tracking-wider text-primary-2 mb-3.75">Intelligent signals</div>
+              <h2 class="text-2xl md:text-3xl lg:text-[34px] font-heading font-medium text-primary-2 leading-[1.15] mb-3.75">
+                Understand team activity in real time
+              </h2>
+              <p class="text-base md:text-base text-default-700 md:mb-10 mb-5 max-w-[380px] leading-relaxed">
+                Lightweight analytics reveal engagement patterns and emerging workflow trends.
+              </p>
+              <a
+                href="feature.html"
+                class="flex items-center justify-center py-2.5 px-7 text-sm font-semibold rounded-full bg-primary-2 text-white transition-all shadow-sm w-max group hover:rounded-xl duration-300"
+              >
+                <div class="relative overflow-hidden flex">
+                  <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Get Started</span>
+                  <span
+                    class="absolute inset-0 inline-block transition-transform duration-500 translate-y-[120%] group-hover:translate-y-0 text-center"
+                    >Get Started</span
+                  >
+                </div>
+              </a>
+            </div>
+
+            <div class="relative w-full md:w-1/2 h-70 lg:h-125 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="https://unifato.com/salifact/images/blog/bg-3.webp"
+                alt="Feature 2"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <!-- Overlay Card -->
+              <div
+                class="absolute top-1/2 inset-s-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-xl p-5 shadow-[0_20px_40px_-5px_rgba(0,0,0,0.3)] lg:w-110 w-75"
+              >
+                <img src="/salifact/images/icons/element-1.svg" class="w-full h-auto mb-4" />
+                <div class="text-base font-medium text-center text-primary-2">Engagement over 30 days</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div
+            class="md:sticky top-40 z-30 flex flex-col md:flex-row items-center bg-white rounded-lg border border-black/5 p-5 md:p-7.5 gap-6 md:gap-10 lg:gap-8 shadow-lg"
+          >
+            <div class="flex flex-col items-start w-full md:w-1/2 lg:ps-17.5">
+              <div class="text-xs font-bold uppercase font-mono tracking-wider text-white mb-3.75">Outcome</div>
+              <h2 class="text-2xl md:text-3xl lg:text-[34px] font-heading font-medium text-white leading-[1.15] mb-3.75">
+                Complete every workflow with clarity
+              </h2>
+              <p class="text-base md:text-base text-white md:mb-10 mb-5 max-w-[380px] leading-relaxed">
+                Clear outcomes, full visibility, and reliable automation across every process.
+              </p>
+              <a
+                href="feature.html"
+                class="flex items-center justify-center py-2.5 px-7 text-sm font-semibold rounded-full bg-primary-1 text-primary-2 transition-all shadow-sm w-max group hover:rounded-xl duration-300"
+              >
+                <div class="relative overflow-hidden flex">
+                  <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Get Started</span>
+                  <span
+                    class="absolute inset-0 inline-block transition-transform duration-500 translate-y-[120%] group-hover:translate-y-0 text-center"
+                    >Get Started</span
+                  >
+                </div>
+              </a>
+            </div>
+
+            <div class="relative w-full md:w-1/2 h-70 lg:h-125 rounded-xl overflow-hidden shadow-sm">
+              <img
+                src="https://unifato.com/salifact/images/blog/bg-3.webp"
+                alt="Feature 3"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
+
+              <!-- Floating Badges -->
+              <div class="absolute top-6 inset-s-6 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-md text-xs font-bold text-primary-2">
+                All checks passed
+              </div>
+              <div class="absolute top-6 inset-e-6 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-md text-xs font-bold text-primary-2">
+                0 errors
+              </div>
+              <div class="absolute bottom-6 inset-s-6 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-md text-xs font-bold text-primary-2">
+                Audit ready
+              </div>
+
+              <!-- Overlay Counter -->
+              <div class="absolute bottom-6 inset-e-6 bg-primary-1 rounded-xl py-3 px-5">
+                <div class="flex items-baseline mb-1 text-primary-2 gap-0.5">
+                  <h4 class="text-[22px] font-heading font-medium leading-none">99</h4>
+                  <h4 class="text-[22px] font-heading font-medium leading-none">%</h4>
+                </div>
+                <div class="text-xs font-medium text-default-600">Average completion rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-24 bg-red-100"></div>
+
+    <div class="bg-green-100 py-12">
+      <div class="grid md:grid-cols-6 grid-cols-2 gap-2.5">
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+
+        <div class="bg-white lg:py-12.5 md:py-7.5 py-5 px-2.5 rounded-lg flex justify-center items-center">
+          <img src="https://unifato.com/salifact/images/client/client-18.svg" alt="" class="lg:h-6.5 md:h-5 h-4" />
+        </div>
+      </div>
+    </div>
+
+    <div class="py-24 bg-red-100"></div>
+
+    <section class="lg:pt-45 md:pt-36 pt-30 bg-green-100 overflow-hidden">
+      <div class="container mx-auto">
+        <!-- Section Title & Toggle -->
+        <div class="text-center lg:mb-10 mb-7.5">
+          <h2 class="text-4xl md:text-[40px] lg:text-6xl font-medium text-black md:mb-15 mb-8 md:w-2xl mx-auto">
+            Pricing that scales with your workflows
+          </h2>
+        </div>
+
+        <!-- Main White Card -->
+        <div class="bg-white rounded-xl md:p-7.5 p-5 flex flex-col lg:flex-row gap-8 mx-auto">
+          <!-- Starter Plan (Left 1/3) -->
+          <div class="w-full lg:w-1/3 flex flex-col justify-between py-2 md:py-8">
+            <div>
+              <h3 class="text-xl md:text-2xl font-medium text-primary-2 mb-4">Starter</h3>
+              <div class="flex items-end gap-2 mb-4 pricing-amount">
+                <h2 class="text-[40px] lg:text-6xl font-medium text-primary-2 leading-none">
+                  $<span data-hs-toggle-count='{"target": "#pricing-toggle", "min": 29, "max": 25}'>29</span>
+                </h2>
+                <span class="text-default-600 text-sm md:text-base mb-1">/month</span>
+              </div>
+              <p class="text-default-600 text-base leading-relaxed lg:mb-12.5 md:mb-10 mb-6">
+                Launch automation in minutes with ready-made templates and easy integrations.
+              </p>
+
+              <ul class="space-y-2.5 mb-12.5">
+                <li class="flex items-center gap-2.5">
+                  <i class="iconify tabler--circle-check-filled size-5 text-primary-2"></i>
+                  <span class="md:text-base text-sm font-medium text-primary-2">5 automated workflows</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="iconify tabler--circle-check-filled size-5 text-primary-2"></i>
+                  <span class="md:text-base text-sm font-medium text-primary-2">100 tasks per month</span>
+                </li>
+                <li class="flex items-center gap-2.5">
+                  <i class="iconify tabler--circle-check-filled size-5 text-primary-2"></i>
+                  <span class="md:text-base text-sm font-medium text-primary-2">Basic integrations</span>
+                </li>
+                <li class="flex items-center gap-2.5 opacity-40">
+                  <i class="iconify tabler--circle-check-filled size-5 text-primary-2"></i>
+                  <span class="md:text-base text-sm font-medium text-default-500">Priority 24/7 support</span>
+                </li>
+                <li class="flex items-center gap-2.5 opacity-40">
+                  <i class="iconify tabler--circle-check-filled size-5 text-primary-2"></i>
+                  <span class="md:text-base text-sm font-medium text-default-500">Advanced analytics</span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="contact.html"
+              class="flex items-center justify-center py-2.5 px-6 rounded-full bg-green-400 text-white font-medium transition-all w-full md:w-max group hover:rounded-xl duration-300"
+            >
+              <div class="relative overflow-hidden flex">
+                <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Get Started — It's Free</span>
+                <span
+                  class="absolute top-full inset-s-0 inline-block transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap"
+                  >Get Started — It's Free</span
+                >
+              </div>
+            </a>
+          </div>
+
+          <!-- Pro & Enterprise (Right 2/3) -->
+          <div
+            class="w-full lg:w-2/3 bg-green-400 rounded-lg md:p-7.5 p-5 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-12 relative overflow-hidden"
+          >
+            <!-- Professional Plan -->
+            <div class="flex flex-col justify-between h-full relative z-10 text-white">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-xl md:text-2xl font-medium text-white">Professional</h3>
+                  <span class="text-xs uppercase tracking-wider font-medium border border-primary-1 text-primary-1 px-3 py-1 rounded-full"
+                    >Popular</span
+                  >
+                </div>
+                <div class="flex items-end gap-2 mb-4 pricing-amount">
+                  <h2 class="text-[40px] lg:text-6xl font-medium leading-none text-white">
+                    $<span data-hs-toggle-count='{"target": "#pricing-toggle", "min": 79, "max": 69}'>79</span>
+                  </h2>
+                  <span class="text-white text-sm md:text-base mb-1">/month</span>
+                </div>
+                <p class="text-white text-base leading-relaxed md:mb-12.5 mb-7.5">
+                  Ideal for growing teams requiring advanced automation capabilities.
+                </p>
+
+                <ul class="space-y-2.5 mb-12.5">
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">25 automated workflows</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">1,000 tasks per month</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Premium integrations</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Priority 24/7 support</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Advanced analytics</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href="contact.html"
+                class="flex items-center justify-center py-2.5 px-6 rounded-full bg-primary-1 text-primary-2 font-medium transition-all w-full mt-auto group hover:rounded-xl duration-300"
+              >
+                <div class="relative overflow-hidden flex">
+                  <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Get Started</span>
+                  <span
+                    class="absolute top-full inset-s-0 inline-block transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap"
+                    >Get Started</span
+                  >
+                </div>
+              </a>
+            </div>
+
+            <!-- Enterprise Plan -->
+            <div class="flex flex-col justify-between h-full relative z-10 text-white md:border-l md:border-white/10 md:pl-10">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <h3 class="text-xl md:text-2xl font-medium text-white">Enterprise</h3>
+                </div>
+                <div class="flex items-end gap-2 mb-4 pricing-amount">
+                  <h2 class="text-[40px] lg:text-6xl font-medium leading-none text-white">
+                    $<span data-hs-toggle-count='{"target": "#pricing-toggle", "min": 199, "max": 179}'>199</span>
+                  </h2>
+                  <span class="text-white text-sm md:text-base mb-1">/month</span>
+                </div>
+                <p class="text-white text-base leading-relaxed md:mb-12.5 mb-7.5">
+                  Built for large organizations with complex automation requirements.
+                </p>
+
+                <ul class="space-y-2.5 mb-12.5">
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Unlimited workflows</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Unlimited tasks</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Custom integrations</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">Dedicated account manager</span>
+                  </li>
+                  <li class="flex items-center gap-2.5">
+                    <i class="iconify tabler--circle-check-filled size-5 text-white"></i>
+                    <span class="text-base font-medium">SLA guarantee + API access</span>
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href="contact.html"
+                class="flex items-center justify-center py-2.5 px-6 rounded-full bg-white text-primary-2 font-medium transition-all w-full mt-auto group hover:rounded-xl duration-300"
+              >
+                <div class="relative overflow-hidden flex">
+                  <span class="inline-block transition-transform duration-500 group-hover:-translate-y-[120%]">Contact sales</span>
+                  <span
+                    class="absolute top-full inset-s-0 inline-block transition-transform duration-500 group-hover:-translate-y-full whitespace-nowrap"
+                    >Contact sales</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="py-24 bg-red-100"></div>
+
+    <div class="flex justify-center">
+      <a
+        href="#"
+        class="group inline-flex items-center gap-3 rounded-full bg-blue-500 lg:px-9 md:px-6.5 px-5 md:py-5 py-2.5 overflow-hidden relative"
+      >
+        <!-- Text Wrapper -->
+        <div class="relative md:h-7 h-5 overflow-hidden">
+          <!-- Text One -->
+          <span
+            class="md:text-xl text-sm block transition-transform duration-300 ease-in-out group-hover:-translate-y-full text-white font-medium"
+          >
+            Start writing now
+          </span>
+
+          <!-- Text Two -->
+          <span
+            class="md:text-xl text-sm absolute inset-0 translate-y-full transition-transform duration-300 ease-in-out group-hover:translate-y-0 text-white font-medium"
+          >
+            Start writing now
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="py-24 bg-red-100"></div>
+
+    <div class="main-banner overflow-hidden xl:pt-51.25 md:pt-40 pt-25 xl:pb-40 sm:pb-20 pb-10 z-0">
+      <div class="container-lg">
+        <div class="grid grid-cols-12 md:gap-10 gap-2.5">
+          <div class="lg:col-span-7 col-span-12">
+            <div class="px-0">
+              <h2
+                class="2xl:text-7xl xl:text-6xl md:text-5xl sm:text-4xl text-3xl font-semibold headline lg:mb-13.75 mb-5 is-split"
+                style="opacity: 1"
+                aria-label="Collaboration That Elevates Travel"
+              >
+                <div class="line-mask" aria-hidden="true" style="position: relative; display: block; text-align: start; overflow: clip">
+                  <div class="line" aria-hidden="true" style="position: relative; display: block; text-align: start">
+                    <div aria-hidden="true" style="position: relative; display: inline-block">Collaboration</div>
+                    <div aria-hidden="true" style="position: relative; display: inline-block">That</div>
+                  </div>
+                </div>
+                <div class="line-mask" aria-hidden="true" style="position: relative; display: block; text-align: start; overflow: clip">
+                  <div class="line" aria-hidden="true" style="position: relative; display: block; text-align: start">
+                    <div aria-hidden="true" style="position: relative; display: inline-block">Elevates</div>
+                    <div aria-hidden="true" style="position: relative; display: inline-block">Travel</div>
+                  </div>
+                </div>
+              </h2>
+              <div class="xl:flex gap-1.5 lg:mb-15 mb-10 md:flex-row flex-col wow fadeInLeft" data-wow-delay="0.8s">
+                <div class="min-w-23.5">
+                  <p class="text-lg font-normal text-secondary font-title">Team</p>
+                </div>
+                <div class="min-w-20 h-px mt-3.75 bg-black/10"></div>
+                <div class="xl:ps-10 xl:pe-7.5 max-xl:mt-5">
+                  <p class="xl:text-xl sm:text-lg text-sm font-normal">
+                    Welcome to the space where creativity knows no bounds. Our agency is a hub of innovation, collaboration, and artistry,
+                    dedicated to crafting unforgettable campaigns that resonate and inspire.
+                  </p>
+                </div>
+              </div>
+              <div class="overflow-hidden 2xl:max-w-200 lg:max-w-150 wow clip-right-animation">
+                <img src="https://plexify-travel-tailwind.vercel.app/assets/images/team/pic4.png" alt="img" class="w-full" />
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 col-span-12">
+            <div class="2xxl:ps-10">
+              <div class="relative max-2xl:flex max-2xl:flex-col max-2xl:gap-20 max-sm:gap-28">
+                <div class="lg:flex items-center justify-star wow fadeInDown" data-wow-delay="1s">
+                  <img
+                    src="https://plexify-travel-tailwind.vercel.app/assets/images/team/pic4.png"
+                    alt="img"
+                    class="2xxl:w-auto 2xl:w-[65%] lg:w-[71%] sm:w-[58%] w-1/2"
+                  />
+                </div>
+                <div
+                  class="flex items-center justify-end md:-mt-45 -mt-50 sm:ms-0 -ms-10 2xxl:-me-25 lg:-me-5 wow fadeInRight"
+                  data-wow-delay="1s"
+                >
+                  <img
+                    src="https://plexify-travel-tailwind.vercel.app/assets/images/team/pic2.png"
+                    alt="img"
+                    class="2xxl:w-auto 2xl:w-[65%] lg:w-[71%] sm:w-[58%] w-1/2"
+                  />
+                </div>
+                <div class="flex items-center justify-start 3xl:-mt-28 2xl:-mt-30 lg:-mt-55 md:-mt-81 -mt-55 relative">
+                  <img
+                    src="https://plexify-travel-tailwind.vercel.app/assets/images/team/pic3.png"
+                    alt="img"
+                    class="2xxl:w-auto 2xl:w-[65%] lg:w-[71%] sm:w-[58%] w-1/2 wow fadeInUp"
+                    data-wow-delay="1s"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="py-24 bg-red-100"></div>
+
+    <!-- Footer -->
+    <!-- https://preview.themeforest.net/item/plexify-tour-travel-agency-tailwind-css-template/full_screen_preview/61586276 -->
+    <footer class="bg-[#F2EFEA] dark:bg-light overflow-hidden">
+      <!-- Footer Top -->
+      <div class="container">
+        <div class="lg:pt-30 md:pt-25 pt-20 md:pb-17.5 pb-12.5 text-center max-w-225 mx-auto">
+          <h2 class="2xl:text-7xxl lg:text-6xxl md:text-5xxl sm:text-4xxl text-3xxl uppercase font-medium mb-7.5">
+            Subscribe now for unbeatable travel offers!
+          </h2>
+          <form class="dzSubscribe style-1" action="assets/script/mailchamp.php" method="post">
+            <div class="dzSubscribeMsg"></div>
+            <div class="relative flex flex-wrap items-stretch w-full mb-5 max-w-150 mx-auto">
+              <input
+                name="dzEmail"
+                required="required"
+                type="email"
+                class="relative flex-1 w-[1%] md:h-17.5 h-15 rounded-10xl text-bodycolor bg-white text-base md:pr-46.25 md:pl-7.5 py-3.75 pr-20 pl-5 z-0 placeholder:text-bodycolor"
+                placeholder="Enter Your Email Address"
+              />
+              <div class="absolute md:right-2.5 right-1.5 top-1/2 -translate-y-1/2 z-1">
+                <button
+                  name="submit"
+                  value="Submit"
+                  type="submit"
+                  aria-label="Subscribe Now"
+                  class="btn btn-primary btn-hover max-md:px-5!"
+                  data-hover-init="true"
+                >
+                  <span class="md:block hidden">Subscribe</span>
+                  <span class="md:hidden">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                  </span>
+                  <span class="md:block hidden gsap-clone" style="--clone-left: 35px; --clone-top: 14px">Subscribe</span>
+                </button>
+              </div>
+            </div>
+          </form>
+          <p class="text-sm text-secondary">
+            We are Committed So protecting Your <a href="contact-us-1.html" class="font-medium">Privacy Policy</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Footer Middle -->
+      <div class="flex items-center gap-2.5 px-5 animate-ticker">
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+        <div class="relative overflow-hidden rounded-2lg lg:min-w-65 sm:min-w-50 min-w-30">
+          <img src="https://plexify-travel-tailwind.vercel.app/assets/images/gallery/img5.png" alt="" class="size-full object-cover" />
+        </div>
+      </div>
+    </footer>
+
+    <div class="py-24 bg-red-100"></div>
+    <!-- Blog Cards -->
+    <section id="journal" class="relative py-28 lg:py-36">
+      <div class="mx-auto w-full max-w-[1440px] px-6 lg:px-12">
+        <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
+          <div>
+            <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 0ms">
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-border/70 bg-card/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground backdrop-blur"
+                ><span class="h-1.5 w-1.5 rounded-full bg-gradient-brand"></span>Journal</span
+              >
+            </div>
+            <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 80ms">
+              <h2 class="mt-6 max-w-2xl text-[clamp(2.25rem,4.4vw,3.5rem)] font-bold leading-[1.03]">
+                Notes from the<span class="text-gradient"> studio floor.</span>
+              </h2>
+            </div>
+          </div>
+          <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 120ms">
+            <a
+              href="/journal"
+              class="glass inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-transform duration-300 hover:-translate-y-1"
+              >All articles
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right h-4 w-4"
+                aria-hidden="true"
+              >
+                <path d="M7 7h10v10"></path>
+                <path d="M7 17 17 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="mt-14 grid gap-6 md:grid-cols-3">
+          <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 0ms">
+            <a
+              href="/journal/the-dashboard-redesign-that-cut-support-tickets-by-41"
+              class="block group h-full overflow-hidden rounded-[2rem] border border-border/60 bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-premium"
+              ><article>
+                <div class="overflow-hidden">
+                  <img
+                    alt="The dashboard redesign that cut support tickets by 41%"
+                    loading="lazy"
+                    class="aspect-[16/11] w-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
+                    src="https://trixel-react.netlify.app/assets/work-1-BAT0R_nv.jpg"
+                  />
+                </div>
+                <div class="p-7">
+                  <div class="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <span class="rounded-full bg-accent px-3 py-1 text-accent-foreground">Product</span><span>12 Jul 2026</span>
+                  </div>
+                  <h3 class="mt-5 text-xl font-semibold leading-snug transition-colors group-hover:text-primary">
+                    The dashboard redesign that cut support tickets by 41%
+                  </h3>
+                  <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                    >Read more<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-up-right h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </span>
+                </div></article
+            ></a>
+          </div>
+          <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 90ms">
+            <a
+              href="/journal/design-systems-are-a-product-not-a-deliverable"
+              class="block group h-full overflow-hidden rounded-[2rem] border border-border/60 bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-premium"
+              ><article>
+                <div class="overflow-hidden">
+                  <img
+                    alt="Design systems are a product, not a deliverable"
+                    loading="lazy"
+                    class="aspect-[16/11] w-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
+                    src="https://trixel-react.netlify.app/assets/work-1-BAT0R_nv.jpg"
+                  />
+                </div>
+                <div class="p-7">
+                  <div class="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <span class="rounded-full bg-accent px-3 py-1 text-accent-foreground">Design</span><span>28 Jun 2026</span>
+                  </div>
+                  <h3 class="mt-5 text-xl font-semibold leading-snug transition-colors group-hover:text-primary">
+                    Design systems are a product, not a deliverable
+                  </h3>
+                  <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                    >Read more<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-up-right h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </span>
+                </div></article
+            ></a>
+          </div>
+          <div data-armed="true" data-visible="true" class="reveal" style="transition-delay: 180ms">
+            <a
+              href="/journal/why-your-landing-page-converts-worse-than-your-homepage"
+              class="block group h-full overflow-hidden rounded-[2rem] border border-border/60 bg-card transition-all duration-500 hover:-translate-y-2 hover:shadow-premium"
+              ><article>
+                <div class="overflow-hidden">
+                  <img
+                    alt="Why your landing page converts worse than your homepage"
+                    loading="lazy"
+                    class="aspect-[16/11] w-full object-cover transition-transform duration-[900ms] group-hover:scale-110"
+                    src="https://trixel-react.netlify.app/assets/work-1-BAT0R_nv.jpg"
+                  />
+                </div>
+                <div class="p-7">
+                  <div class="flex items-center gap-3 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+                    <span class="rounded-full bg-accent px-3 py-1 text-accent-foreground">Growth</span><span>09 Jun 2026</span>
+                  </div>
+                  <h3 class="mt-5 text-xl font-semibold leading-snug transition-colors group-hover:text-primary">
+                    Why your landing page converts worse than your homepage
+                  </h3>
+                  <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                    >Read more<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-arrow-up-right h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 7h10v10"></path>
+                      <path d="M7 17 17 7"></path>
+                    </svg>
+                  </span>
+                </div></article
+            ></a>
+          </div>
+        </div>
+        <div class="mt-24 grid gap-12 lg:grid-cols-12">
+          <div data-armed="true" data-visible="true" class="reveal lg:col-span-4" style="transition-delay: 0ms">
+            <h3 class="text-3xl font-bold leading-tight">Frequently asked<span class="text-gradient"> questions</span></h3>
+            <p class="mt-4 text-muted-foreground">Everything teams usually ask before the first call.</p>
+          </div>
+          <div data-armed="true" data-visible="true" class="reveal lg:col-span-8" style="transition-delay: 100ms">
+            <div class="glass rounded-[2rem] px-7 py-2" data-orientation="vertical">
+              <div data-state="closed" data-orientation="vertical" class="border-b border-border/50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    data-state="closed"
+                    data-orientation="vertical"
+                    id="radix-_r_f_"
+                    class="flex flex-1 items-center justify-between py-4 cursor-pointer transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left text-base font-semibold hover:no-underline"
+                    data-radix-collection-item=""
+                  >
+                    How quickly can we start?<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  data-state="closed"
+                  id="radix-_r_g_"
+                  hidden=""
+                  role="region"
+                  aria-labelledby="radix-_r_f_"
+                  data-orientation="vertical"
+                  class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+                  style="
+                    --radix-accordion-content-height: var(--radix-collapsible-content-height);
+                    --radix-accordion-content-width: var(--radix-collapsible-content-width);
+                  "
+                ></div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-b border-border/50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    data-state="closed"
+                    data-orientation="vertical"
+                    id="radix-_r_h_"
+                    class="flex flex-1 items-center justify-between py-4 cursor-pointer transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left text-base font-semibold hover:no-underline"
+                    data-radix-collection-item=""
+                  >
+                    Do you work with in-house teams?<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  data-state="closed"
+                  id="radix-_r_i_"
+                  hidden=""
+                  role="region"
+                  aria-labelledby="radix-_r_h_"
+                  data-orientation="vertical"
+                  class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+                  style="
+                    --radix-accordion-content-height: var(--radix-collapsible-content-height);
+                    --radix-accordion-content-width: var(--radix-collapsible-content-width);
+                  "
+                ></div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-b border-border/50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    data-state="closed"
+                    data-orientation="vertical"
+                    id="radix-_r_j_"
+                    class="flex flex-1 items-center justify-between py-4 cursor-pointer transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left text-base font-semibold hover:no-underline"
+                    data-radix-collection-item=""
+                  >
+                    What happens after launch?<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  data-state="closed"
+                  id="radix-_r_k_"
+                  hidden=""
+                  role="region"
+                  aria-labelledby="radix-_r_j_"
+                  data-orientation="vertical"
+                  class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+                  style="
+                    --radix-accordion-content-height: var(--radix-collapsible-content-height);
+                    --radix-accordion-content-width: var(--radix-collapsible-content-width);
+                  "
+                ></div>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-b border-border/50">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <button
+                    type="button"
+                    aria-expanded="false"
+                    data-state="closed"
+                    data-orientation="vertical"
+                    id="radix-_r_l_"
+                    class="flex flex-1 items-center justify-between py-4 cursor-pointer transition-all [&amp;[data-state=open]&gt;svg]:rotate-180 text-left text-base font-semibold hover:no-underline"
+                    data-radix-collection-item=""
+                  >
+                    Who owns the work?<svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-chevron-down h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+                      aria-hidden="true"
+                    >
+                      <path d="m6 9 6 6 6-6"></path>
+                    </svg>
+                  </button>
+                </h3>
+                <div
+                  data-state="closed"
+                  id="radix-_r_m_"
+                  hidden=""
+                  role="region"
+                  aria-labelledby="radix-_r_l_"
+                  data-orientation="vertical"
+                  class="overflow-hidden text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+                  style="
+                    --radix-accordion-content-height: var(--radix-collapsible-content-height);
+                    --radix-accordion-content-width: var(--radix-collapsible-content-width);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
